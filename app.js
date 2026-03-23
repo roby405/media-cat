@@ -7,7 +7,7 @@ import {
 } from 'discord-interactions';
 import { getGameInfo } from './api/game.js';
 import { getTvInfo } from './api/tv.js';
-import { getAnimeInfo } from './api/anime.js';
+import { getAnimeInfo, getMangaInfo } from './api/anime.js';
 import { getBookInfo } from './api/book.js';
 import { getVNInfo } from './api/vn.js';
 
