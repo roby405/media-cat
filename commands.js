@@ -56,6 +56,27 @@ const ANIME_COMMAND = {
   integration_types: [0, 1],
 }
 
+const MANGA_COMMAND = {
+  name: 'manga',
+  description: 'Get information about a manga',
+  options: [
+    {
+      type: 3,
+      name: 'title',
+      description: 'The title of the manga',
+      required: true
+    },
+    {
+      type: 3,
+      name: 'year',
+      description: 'The release year of the manga',
+      required: false
+    },
+  ],
+  type: 1,
+  integration_types: [0, 1],
+}
+
 const GAME_COMMAND = {
   name: 'game',
   description: 'Get information about a game',

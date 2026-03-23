@@ -63,9 +63,9 @@ app.post('/interactions', verifyKeyMiddleware(process.env.PUBLIC_KEY), async fun
         },
       });
     }
-    if (name === 'anime') {
+    if (name === 'anime' || name === 'manga') {
       const query = data.options[0].value;
-      const anime = await getAnimeInfo({ query });
+      const anime = name === 'anime' ? await getAnimeInfo({ query }) : await getMangaInfo({ query });
       if (anime.type === 'error') {
         return res.send({ type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE, data: { content: anime.error } });
       }
